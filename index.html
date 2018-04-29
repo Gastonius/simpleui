@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <title>Gaston Gorosterrazu</title>
+  </head>
+  <body>
+    <div class="section">
+      <div class="container main_container cards" />
+      <div class="counter" />
+    </div>
+    <!-- Floating buttons -->
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large black">
+        <i class="large material-icons">menu</i>
+      </a>
+      <ul>
+        <li id="add_new_record">
+          <a class="waves-effect btn-floating green"><i class="material-icons">add</i></a>
+        </li>
+        <li id="empty_database_btn">
+          <a class="waves-effect btn-floating red"><i class="material-icons">remove_circle_outline</i></a>
+        </li>
+        <li id="change_visualization_format">
+          <a class="waves-effect btn-floating blue"><i class="material-icons">art_track</i></a>
+        </li>
+      </ul>
+      <div class="tooltip">blah blah blah</div>
+    </div>
+    <!--Modal for empty database-->
+    <div id="modal_empty_database" class="modal">
+      <div class="modal-content">
+        <h4>Empty Database</h4>
+        <p>Your database appears to be empty at the moment...</p>
+        <p>Would you like me to fill it with some default values?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat">No, thank you</a>
+        <a href="#!" id="btn_autofilldb" class="modal-action modal-close waves-effect waves-green btn-flat">Yes please</a>
+      </div>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>

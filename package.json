@@ -1,0 +1,11 @@
+{
+  "name": "stensul",
+  "version": "1.0.0",
+  "description": "A simple application to upload images and name them",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

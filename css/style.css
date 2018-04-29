@@ -1,0 +1,238 @@
+
+html {
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-weight: normal;
+  color: rgba(0,0,0,0.87);
+}
+
+.section {
+  padding-bottom: 7rem;
+}
+
+.counter {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 7rem;
+  background: #00000021;
+  z-index: 10;
+  left: 0;
+  line-height: 7rem;
+  padding-left: 3rem;
+}
+
+.main_container.cards {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.main_container.rows {
+  display: flex;
+  flex-flow: column;
+}
+
+.ui_item_img {
+  transition: border-radius 100ms linear;
+}
+
+.rows .ui_item {
+  position: relative;
+  display: flex;
+  line-height: 1.5rem;
+  padding: 10px 20px;
+  margin: 0;
+  border-style: solid;
+  border-color: #e0e0e0;
+  border-width: 1px 1px 0px 1px;
+  align-items: center;
+}
+
+.dragging.ui_item {
+  background-color: rgba(187, 187, 187, 0.42);
+}
+
+.dragover.ui_item {
+  background-color: rgba(187, 187, 187, 0.84);
+}
+
+.rows .ui_item:last-child {
+  border-bottom-width: 1px;
+}
+
+.rows .ui_item_img {
+  height: 3rem;
+  width: 3rem;
+  margin: .5rem 1rem;
+  border-radius: 50%;
+}
+
+.rows .ui_item_buttons {
+  position: absolute;
+  right: 1rem;
+}
+
+.cards .ui_item {
+  position: relative;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+  background-color: #fff;
+  -webkit-transition: -webkit-box-shadow .25s;
+  transition: -webkit-box-shadow .25s;
+  transition: box-shadow .25s;
+  transition: box-shadow .25s, -webkit-box-shadow .25s;
+  border-radius: 2px;
+  height: 320px;
+  overflow: hidden;
+}
+
+.cards .ui_item_text {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  padding: 24px;
+  font-size: 24px;
+  font-weight: 300;
+  transition: all 300ms linear;
+}
+
+.cards .ui_item_buttons {
+  height: 50px;
+  background: rgba(255,255,255,.87);
+  bottom: -50px;
+  width: 100%;
+  position: absolute;
+  transition: all 300ms linear;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.cards .ui_item_buttons a {
+  margin: 1rem;
+}
+
+.cards .ui_item:hover .ui_item_text {
+  bottom: 50px;
+}
+
+.cards .ui_item:hover .ui_item_buttons {
+  bottom: 0px;
+}
+
+.tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  margin-top: -.5rem;
+  width: 0px;
+  white-space: nowrap;
+  padding: .5rem 0;
+  background: rgba(0,0,0,0.87);
+  color: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  transition: all 500ms cubic-bezier(0.65, 0.815, 0.735, 0.395) 100ms;
+  text-align: right;
+  opacity: 0;
+}
+
+.tooltip.shown {
+  width: 20rem;
+  padding: .5rem;
+  opacity: 0.9;
+}
+
+.rows .create_record,
+.cards .create_record {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: rgba(0,0,0,0.87);
+  margin: 0;
+}
+
+.image-drop-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.image-drop-container:before {
+  content: 'Drop your image here';
+  position: absolute;
+  text-align: center;
+  margin: 0 auto;
+  width: 50vw;
+  top: 50%;
+  color: #fff;
+  font-weight: 300;
+  font-size: 3rem;
+  opacity: .5;
+  margin-left: 25vw;
+  border: 1px dashed #fff;
+  line-height: 5rem;
+}
+
+.image-drop-container.drag-enter:before {
+  content: 'You make me a proud drop container!';
+  color: #5efd99;
+  border: 1px dashed #5efd99;
+}
+
+.drop-image {
+  display: none;
+  height: 20rem;
+  width: 20rem;
+  margin: 1rem;
+  border: 1px solid white;
+}
+
+.dropped-image .drop-image {
+  display: block;
+}
+
+.image-drop-container.dropped-image:before {
+  content: '';
+  display: none;
+}
+
+.name-of-image {
+  position: absolute;
+  top: 150vh;
+  width: 50vw;
+  background: white;
+  padding: 1rem 3rem;
+  margin-left: 25vw;
+  border-radius: 3px;
+  z-index: 30;
+  transition: top 300ms cubic-bezier(0.42, 0, 0.12, 1.57);
+}
+
+.name-of-image > button {
+  position: absolute;
+  right: 1.5rem;
+}
+
+.dropped-image .name-of-image {
+  top: 50vh;
+}
+
+.image-drop-container .btn-floating {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.image-drop-container .btn-floating i { 
+  color: black;
+}

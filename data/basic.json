@@ -1,0 +1,14 @@
+[
+	{
+		"name":"car",
+		"img":"data/img/car.jpg"
+	},
+	{
+		"name":"city",
+		"img":"data/img/city.jpg"
+	},
+	{
+		"name":"Technology",
+		"img":"data/img/technology.jpg"
+	}
+]
