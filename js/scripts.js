@@ -260,7 +260,7 @@ function interface() {
     
     var preinputfield = $('<div class="name-of-image">').appendTo(dropContainer);
     var inputfield = $('<div class="input-field">').appendTo(preinputfield);
-    var field = $('<input id="image_name" type="text" class="validate">').appendTo(inputfield);
+    var field = $('<input id="image_name" type="text" class="validate" maxlength="300">').appendTo(inputfield);
     var label = $('<label for="image_name">Image Name</label>').appendTo(inputfield);
 
     // Edition caps

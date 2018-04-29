@@ -39,7 +39,6 @@ html {
 }
 
 .rows .ui_item {
-  position: relative;
   display: flex;
   line-height: 1.5rem;
   padding: 10px 20px;
@@ -69,8 +68,11 @@ html {
   border-radius: 50%;
 }
 
+.rows .ui_item_text {
+  flex-grow: 2;
+}
+
 .rows .ui_item_buttons {
-  position: absolute;
   right: 1rem;
 }
 
